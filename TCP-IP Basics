@@ -1,0 +1,2536 @@
+This is a typical IP address.
+Odds are good, you've probably seen one of these, they show up all over the place on our computers.
+
+Every computer on a TCP IP network must have a unique IP address.
+
+IP addresses are distinct in that it's going to be four values separated by three dots.
+
+Well, I've got a little bit of interesting news for you.
+
+This is actually a lie.
+
+A real IP address is nothing more than 32 ones and zeros.
+
+That's it.
+
+Just ones and zeros on and off.
+
+Pulses of electricity or light, whatever it might be.
+
+But to show you that I've decided I like to play go.
+
+So I got to go game out and I'm going to represent zeros with little white beads, and I'm going to
+
+represent ones with black beads.
+
+So what I have here in front of me is a real IP address.
+
+This is 32 ones and zeroes.
+
+And what we need to do in this episode is understand how we can take ones and zeroes and convert them
+
+into something like this.
+
+So to do that, the first thing you need to appreciate is that there really are no dots.
+
+Dots don't exist in IP addresses.
+
+They're really just separators.
+
+I mean, here's a phone number right here.
+
+Now, if you take a look at this phone number, would you actually dial an open parenthesis in the close
+
+parenthesis and a dash as part of your dialing process on a phone?
+
+Of course not.
+
+The reason those are there on a phone number is because human beings need to be able to use telephones
+
+and they're used as separators.
+
+So it's really the same thing with IP addresses.
+
+So in order to go from this down to this, we're going to have to go through a process.
+
+Let me show you how this works.
+
+The first thing you want to do is if you have 32 ones and zeros, we're going to break them up into
+
+four groups of eight.
+
+So I'm just going to.
+
+Separate these with my hand, and there's no particular reason for separating them into four groups
+
+of eight other than it was chosen arbitrarily as a good way to do this.
+
+So I'm going to just kind of artificially separate them a little bit so we can see it a little bit better.
+
+Now I've got four groups of eight here.
+
+If you have eight ones and zeroes, you could have all zeros.
+
+So here we have all zeros.
+
+Or you could have all ones.
+
+Or we could have a whole bunch of combinations in between, like this is one possible combination between
+
+all zeros and all ones.
+
+This is another possible.
+
+This is another possible combination.
+
+So is this.
+
+And this is one as well.
+
+So the whole idea behind dotted decimal notation is that instead of us having to say things like my
+
+IP address is zero zero one zero zero one zero zero one zero zero one zero.
+
+And because that's really hard to type into a computer.
+
+The dotted decimal notation is nothing more than a shortcut, a shorthand that we use to represent 30
+
+to ones and zeros in a row.
+
+So by breaking them into groups of eight, we can have different combinations anywhere from all zeros
+
+to all ones with a bunch of combinations in between.
+
+There are exactly two to the eight or two hundred and fifty six combinations.
+
+Now in the IP world, we start with zeros, so it's zero to two fifty five.
+
+And that's where IP addresses come from.
+
+It's simply taking eight ones and zeros and converting it into a value that goes between zero and two
+
+point fifty five.
+
+The secret to converting from binary to dotted decimal is to take a piece of paper and remember one
+
+number.
+
+Remember one hundred and twenty eight?
+
+If you can remember that number, you can convert this very, very easily, and you're going to have
+
+to do this on the network plus, by the way.
+
+So if you could remember the number 128, you take a piece of paper and in the upper left hand corner
+
+you write in 128 and then you take half of that, then half, then half and half and half and half and
+
+half.
+
+So if you take a look, we've got one two three four five six seven eight locations.
+
+Got it.
+
+All right.
+
+So once you've got this little cheat sheet, let's go ahead and pick a value.
+
+So what I'm going to do is one one zero zero zero one zero one.
+
+So just like that.
+
+So let's go ahead and do that.
+
+Now I'm going to use beads.
+
+But on your piece of paper, you could just write ones and zeros directly underneath each of these letters.
+
+Zero one.
+
+Zero one.
+
+OK.
+
+One one zero zero zero one zero one.
+
+OK.
+
+Now, what you have to do at this point is simply take a look and wherever you have a one, you add
+
+those values together.
+
+So let's go through the math here.
+
+So one hundred and twenty eight, we got a one there.
+
+So that gets added.
+
+Plus sixty four is one hundred ninety two.
+
+Now, we don't at any of these because these are all zeros plus four is 196.
+
+We don't have the two because that's a zero plus one is one hundred and ninety seven.
+
+Congratulations, you've just converted one one zero zero zero one zero one into the dotted decimal
+
+notation of ninety seven.
+
+Perfect.
+
+That's great, but let's do it a few more times to make sure you get the idea.
+
+I'm going to pick another value.
+
+In this case, I'm going to pick zero zero zero zero one one one zero.
+
+Now again, you could just write ones and zeros on the piece of paper to do this for yourself.
+
+But let's go through the process.
+
+Now remember, if it has a zero underneath it, we don't add it, so we're not going to add one twenty
+
+eight.
+
+We're not going to add sixty four.
+
+We're not going to add thirty two.
+
+We're not going to add 16 or one.
+
+So it's only these three values.
+
+So eight plus four plus two equals 14.
+
+So zero zero zero zero one one one zero equals 14 as an octet.
+
+Fantastic.
+
+Let's try it one more time.
+
+And again, I'm just going to pick an arbitrary value.
+
+So this time I'm going to do one zero one zero one zero one zero.
+
+And again, you can write ones and zeroes underneath your piece of paper to do the exact same thing
+
+I'm doing with my go beads.
+
+So here we go.
+
+First, we'll get rid of the zeros.
+
+So we're going to add one hundred and twenty eight plus thirty two, and that's one hundred and sixty.
+
+Plus, eight equals one hundred and sixty eight.
+
+Plus, two equals one hundred and seventy, so one zero one zero one zero one zero equals.
+
+170.
+
+Fantastic.
+
+Now there's a couple of these.
+
+After you look at these for a while, you start to notice certain things, for example, that these
+
+were all zeros.
+
+Like that, then the answer is going to be zero equally.
+
+If it's all once it's two hundred and fifty five.
+
+It's important that you should be able to recognize some of these binary values and instantly be able
+
+to convert it into an octet, so all zero zero all ones is 250 five.
+
+If you have just a one, followed by seven zeros.
+
+That's going to be one hundred and twenty eight.
+
+If you have seven zeros with just a one, that's one that's all you need to do to take any binary value
+
+and convert it into an octet.
+
+So if you remember one twenty eight, it's really easy to do.
+
+So let's go ahead and reverse the process.
+
+So now what I'm going to do is I'm going to give you an octet value and I need you to be able to convert
+
+it into binary.
+
+Don't worry, we still use the exact same tool.
+
+Just remember one.
+
+Twenty eight.
+
+OK, so I've got my little piece of paper with the 128 all the way down to the one again.
+
+So let's go ahead and do a couple of examples.
+
+Let's start off with the well, I'll pick an arbitrary value here between zero and two fifty five.
+
+Let's do one hundred and seventy one.
+
+So to do that, let's go through the process.
+
+So to make this happen, you start with your initial value one hundred and seventy one and you start
+
+on the left and you march over to the right.
+
+So how many 120 eights are there in 171?
+
+Well, there's exactly one.
+
+So we'll put a one bead there and we subtract one hundred and twenty eight from one hundred and seventy
+
+one and we get the remainder of forty three.
+
+So now we marched down the next one.
+
+How many sixty fours are there and forty three?
+
+Well, sixty four is bigger than forty three, so it's zero.
+
+Then we go to the next value thirty two.
+
+So how many thirty twos are there in forty three?
+
+Well, there's exactly one.
+
+And we go ahead and do the subtraction, so we have forty three minus thirty two and we have 11.
+
+So we keep carrying that 11 along as we go.
+
+So how many 16s are there in 11?
+
+Well, that's bigger than 11.
+
+So there's zero.
+
+So we come to the next value ET, how many eights are there at 11?
+
+Well, there's exactly one.
+
+Leaving the remainder of three.
+
+So how many fours are there in three zero?
+
+How many tools are there in three one?
+
+And then that leaves a value of one and how many ones are in one one.
+
+So that's exactly how we go through the process.
+
+So we've taken one hundred and seventy one and we converted into one zero one zero one zero one one.
+
+Fantastic.
+
+Let's try it again.
+
+This time, I'm going to pick another arbitrary value.
+
+You guys get the right place, and this time we're going to use the value to twenty four.
+
+So let's go through the process.
+
+So we start with four.
+
+How many 120 eights are there in two?
+
+Twenty four?
+
+There's exactly one.
+
+And that leaves us a value of ninety six.
+
+So how many 64s are there in ninety six?
+
+Well, there's exactly one.
+
+So that leaves us the value of thirty two.
+
+So we go ahead and take the thirty two.
+
+How many 32s are there and thirty two?
+
+There's exactly one.
+
+And now we're done.
+
+So all we have to do is throw zeros in for the rest because we don't have any remainder left to deal
+
+with.
+
+So two twenty four equals one one one zero zero zero zero zero.
+
+Perfect, let's do it one more time.
+
+So this time, let's pick the value ninety five, so we'll start on the far left hand side.
+
+How many one twenty eights are there?
+
+Ninety five?
+
+Well, 120 eight.
+
+Bigger than ninety five.
+
+So there's zero.
+
+So now we have ninety five.
+
+So how many 64s are there in ninety five?
+
+Well, there's just one.
+
+So ninety five minus sixty four equals thirty one.
+
+How many 32s are there in thirty, while 32 is bigger than 31, so zero.
+
+How many 16s are there and no one knows exactly one?
+
+And after we do the subtraction, we have exactly 15.
+
+So let's move down to the eights.
+
+How many eights are there in 15?
+
+There's one.
+
+And we do the subtraction and now we have seven.
+
+How many fours are there in seven one?
+
+We do the subtraction, and now we have three.
+
+How many tubes are there in three one?
+
+We do the subtraction now we have one.
+
+And then we put a one on the end.
+
+So we have just converted ninety five into the binary value.
+
+Zero one zero one one one one one.
+
+Fantastic.
+
+It's really important that, you know how to convert binary to octet and octet to binary.
+
+Not just for the network plus, but for the real networking world.
+
+Now keep in mind, I've shown you how to do it by hand.
+
+But in reality, we'll use things like Windows Calculator.
+
+There's apps that you can put on your phone that allow you to do this conversion very, very quickly
+
+and easily.
+
+So for the test, do it by hand.
+
+But in the real world, use a calculator.
+
+
+
+
+
+
+
+
+I'm a computer and I've got this IP packet that I want to send to another computer on my broadcast domain.
+
+Now to do that, I can't just send an IP packet by itself.
+
+I'm running, I don't know, say gigabit ethernet, so I need to put Mac addresses and make an Ethernet
+
+frame to put this IP packet inside of.
+
+So to do that, I'm going to have to get the Mac address of the other computer so that I can go ahead.
+
+Make an Ethernet frame out of the whole shebang and send it out so that that right computer can get
+
+it.
+
+Now to do that, I've got a problem.
+
+And the problem is, if this is me over here and I want to send it to this guy, I may know his IP address
+
+because I've got an IP packet, but I don't know his Mac address.
+
+So what I'm going to have to do is go through a process called Arp.
+
+RPN is a broadcast that sends out onto a network that says, I know your IP address.
+
+If you have this IP address, please respond back.
+
+So let me show you how all this works.
+
+All right, now, I've got my small network here, I've gone ahead and thrown some IP addresses on each
+
+one of the computers to help understand how Arp actually works.
+
+Now keep in mind what we're concentrating on is that I've got an IP packet over here on my computer
+
+and I want to get it to this guy.
+
+So I need his Mac address.
+
+So what this guy is going to do is he is going to send out an ARP and an ARP as a broadcast.
+
+So basically all he says is who has 192, 168, 15 one sixty three?
+
+Please tell 192 one sixty eight fifteen point twenty three.
+
+So he's going to send this out now.
+
+Everybody's going to get this.
+
+It's a broadcast, but only one computer, the purple computer is going to respond because that's his
+
+IP address.
+
+And he's going to say, Oh, that's me, and here's my Mac address.
+
+So by doing that, when my computer gets that response, he can then go ahead and put the right Mac
+
+address, send out the Ethernet frame and send the data to that particular computer.
+
+Now, if you think about this for a little bit, it would mean that every time I wanted to talk to any
+
+computer on my network, I would have to keep harping.
+
+And that would seem to be inefficient.
+
+Wouldn't it be a great idea if individual computers kept a list of all the different IP addresses on
+
+their network, as well as the Mac address?
+
+Well, they do, and you can actually do an ARP command within windows to see the cache of what your
+
+computer has kept track of.
+
+So let me show you how this works.
+
+So here I am in a command prompt.
+
+And to run it, I just type art space minus a that means show me what's stored.
+
+Now, when I run this, you'll see that it's kept a bunch of IP addresses for computers within my local
+
+area network.
+
+You'll see some are dynamic.
+
+I want you to ignore the static ones.
+
+For right now, let's just concentrate on the dynamic ones.
+
+These are stored within your computer and it'll keep these for a few minutes.
+
+So if you do an art minus, say, on your computer, you may not see as much.
+
+So you might find yourself having to, you know, go out to web browser or pinging other computers or
+
+something to actually have art minus a show.
+
+You anything.
+
+Anyway, the important thing for Network+ is that if you want to see your ARP cache, you have to use
+
+the ARP space minus a command.
+
+So that's what AAP is all about.
+
+AAP or address resolution protocol is simply what your computer uses when it has the IP address, and
+
+it needs to know the Mac.
+
+Make sure you know art minus a for the network plus.
+
+
+I've got a little network right here in front of me.
+
+Now if you take a look at this network, first of all, I got one two three four computers on this network
+
+and they're all plugged together into the switch in the center.
+
+But I also have a router now.
+
+This router also has an IP address because routers are always have an IP address that's part of one
+
+local area network, but it also has another IP address, which I don't have on here right now that
+
+helps it go out into the big internet.
+
+Now here's the issue.
+
+Now we know about Arp from the previous episode, but the challenge we have is how do we arp, for example,
+
+if this computer right here wants to talk to this computer right here, he would normally just broadcast
+
+out an ARP, get the IP address and everything would be great.
+
+However, what does this computer right here wants to talk to somebody way out on the internet.
+
+In that case, he's still going to have to arp, but he's going to have to Arp to get to his default
+
+gateway to his router.
+
+So what we need is something built into every network that identifies it as its own local area network
+
+and also a mechanism that allows an individual computer to determine, Hey, if I'm talking to this
+
+IP address, this is a local call.
+
+Just go ahead and Arp.
+
+However, if it's a long distance call, go ahead and talk through your default gateway through your
+
+router to get out to the internet, and that's where your subnet mask really comes into play.
+
+Now, to help get us all wrapped around on this concept, I've got something laid out right here.
+
+I'd like you to take a look at.
+
+Now, what we're looking at down here is what we're going to call my network I.D. The Network ID is
+
+the part of the network numbering system that has to be identical for every computer on this particular
+
+network.
+
+Now on my network, which I've decided to set up this way, all the computers are going to be two thirty
+
+to twenty five to eight.
+
+And then here I put zero.
+
+The idea behind this is that when I'm setting up these network IDs, no computer can have just a zero
+
+as part of its numbering system because it's reserved for what we call the network ID.
+
+So I could have a computer in this network ID that's called to thirty two point twenty five to weeks
+
+14, but no computer could be called to thirty two point twenty five to 8.0.
+
+That's reserved for this Network ID.
+
+Now, the part over here that changes for every individual computer is going to be called the host ID.
+
+So what I'm going to do is I'm going to put a little skewer here to kind of separate it, and that's
+
+where this guy called the subnet mask comes into play.
+
+A subnet mask is a string of ones, followed by a certain number of zeros.
+
+Everywhere there is one.
+
+The numbers have to stay the same anywhere there's a zero, you can change the values.
+
+So in this particular case, our subnet mask is going to be two five five two five five two five five
+
+zero.
+
+Now I need to warn you about something for a minute.
+
+Always remember, computers don't use the dotted decimal notation.
+
+It's just for us human beings when we type in two five five two five five two five five zero in our
+
+computers.
+
+He instantaneously changes it into what it really is.
+
+Twenty four ones, followed by eight zeros.
+
+So let's take a look at this example one more time.
+
+Now, in this particular example, the way we've got this set up is that the first three numbers are
+
+identical.
+
+And then the last number can be anywhere from one to two hundred and fifty four.
+
+We can't use zero and we can't use 255.
+
+But watch this.
+
+So what I've done here is I've replaced the third set of ones with all zeros so we could get the right
+
+value in there.
+
+And what we now have is a subnet mask of two five five two five five zero zero.
+
+Now, as you're looking at this stuff, there's one thing you need to keep in mind.
+
+We always use these terms to five fives and zeros, but we know that the computer just uses all ones
+
+and zeros.
+
+So what we can do is we can simply instead of saying two five five two five five two five zero or two
+
+five five two five five zero zero.
+
+We can talk like the cool kids and simply count the number of ones.
+
+So taking a look at this, we'll see.
+
+We've got one two three four five six seven eight nine 10, 11, 12, 13, 14, 15 16.
+
+So what is commonly done is that we simply say this is a whack 16 subnet.
+
+That little slash is what I call a whack, and that is common terminology.
+
+So you want to get used to it.
+
+The cool part now is that when we change the subnet mass to something like this, we could literally
+
+if we wanted to say only the first two numbers have to be the same.
+
+You can use any other two numbers that you want to use.
+
+It doesn't matter because they're all going to work.
+
+So with a whack 16 subnet, that means only the first two digits have to be the same for all the computers.
+
+So our network I.D. could be anything from, I guess, to thirty to twenty five DOT 1.1 to thirty two
+
+point twenty five to fifty five that to fifty four.
+
+I mean, think how many different computers we could have on this little tiny network.
+
+So usually the subnet mask gets smaller for really huge networks and it gets longer like a whack.
+
+Twenty four to five five two five five two five five zero for smaller networks.
+
+In fact, we know these things ahead of time.
+
+For example, if we use a whack twenty four subnet mask to remember two five five two five five two
+
+five five zero.
+
+We get exactly two hundred and fifty four hosts, so that means the smallest network, at least based
+
+on what we know so far.
+
+We could make would have up to two hundred and fifty four hosts in it.
+
+Remember, you can't use zero or two.
+
+Fifty five.
+
+OK.
+
+So this really makes things a big deal when it comes to making these subnets right at what we call the
+
+dots, where it's only two five fives and zeros.
+
+We've got other episodes coming up where we're going to make it a little bit more interesting.
+
+So basically, in order to make our network work, all of the computers within this one broadcast domain
+
+within this one network I.D. are all going to have to have the same subnet mask.
+
+And wherever there's a two point fifty five in the subnet mask, they're going to have to have the exact
+
+numbers.
+
+Now this gets put into every computer in existence.
+
+So what I want to do right now is take a moment and walk you through a Mac Windows system in a Linux
+
+box to see where these numbers exist on your computer.
+
+Here's an example of network settings on a modern Mac system, you'll see that we have an IP address,
+
+a subnet mask, and what they call the router is the default gateway.
+
+Now, taking a look at windows here, you can see again now you got to dig a little bit to find it.
+
+But I have an IP v4 address as they call it, and then I see my subnet mask.
+
+And if we look down a little bit more, you can actually see where it says default gateway.
+
+Last is Linux.
+
+With a Linux system, you'll see that we have an IP address.
+
+We have a subnet mask, and what they call the default route is the default gateway now that we've got
+
+these values punched into our operating system.
+
+Let's put all of this to work now in this particular example.
+
+I've got all of these computers, and what they're on is a network ID of two 30 to 25k to eight with
+
+a whack twenty four or two five five two five five two five five zero subnet.
+
+Now let's say this computer right here wants to talk to, I don't know, two thirty two point twenty
+
+five to eight dot 14.
+
+Got it!
+
+So what he'll do is work with the subnet mass to determine whether this is a local call or if he needs
+
+to send it out to the default gateway.
+
+Now I've changed the board here a little bit.
+
+Let's watch this in action.
+
+So what we have here is this is my local computer.
+
+He's going to be to thirty two point twenty five to eight dot twenty two in this case.
+
+So the subnet mask here is going to be two five five two five five two five five zero or four schoolkids
+
+a whack twenty four.
+
+Remember, it's twenty four ones, followed by eight zeros.
+
+Now, in this one particular example, he wants to talk to a computer with the IP address of two thirty
+
+to that twenty five to eight dot nine.
+
+Yeah, I know I said 14, let's make it nine.
+
+Instead, the subnet mask allows my local computer to take a look at the address that he's going to
+
+and determine if it's a local call or a long distance call.
+
+So with the subnet mask anywhere, there's a one.
+
+The numbers have to be the same anywhere there's a zero.
+
+They can be different.
+
+So in this particular case, comparing my IP address to who I want to talk to the first three values,
+
+the first three tests are the same as mine.
+
+Therefore, I know that it's a local call.
+
+And since it's a local call, all I need to do is Arp out onto the network.
+
+Get the Mac address of whoever I want to talk to and off it goes.
+
+So that's easy.
+
+Now what happens when it's not within my network ID?
+
+OK, so once again, this row right here is my local computer to thirty two point twenty five to eight
+
+point twenty two.
+
+This time, he wants to talk to a computer at two thirty two fifty two.
+
+That two oh eight nine.
+
+So I want you to look at this very, very closely because it looks very similar to the previous example.
+
+But look at the difference right here.
+
+The big difference is that we have changed one of the values on the left hand side on the network ID
+
+side.
+
+Now I could have put a big, complicated, much different number in there, but that would have been
+
+too easy for you.
+
+It's just like if you're dialing somebody and you accidentally transpose two numbers and you end up
+
+calling somebody in a faraway place or the exact same thing happens here when it comes to IP addresses.
+
+So let's look and let's run through the system and let's use the subnet mask and determine, is this
+
+a local or a long distance call?
+
+Here we go.
+
+So we take a look at the subnet mask.
+
+Remember anything where there's a one that numbers have to be identical anywhere on this side, they
+
+could be different.
+
+So.
+
+As we compare these two numbers to thirty two, they're the same.
+
+But look right here, this is twenty five and this is fifty two.
+
+The numbers are different, instantaneous.
+
+We know that this address right here is not a part of our local area network.
+
+We're going to have to send all of this information out through the default gateway because at 8:00
+
+Local.
+
+Now, the thing you need to remember about all this is that we're really not changing the IP packet
+
+part.
+
+We're not changing the IP addresses.
+
+All we're doing is we're telling the individual host who to ask for.
+
+If it's not a local call, it needs to arp to the default gateway and it knows the default gateways
+
+IP address because you typed it in when you set the system up.
+
+And that's why we have to type in the default gateway that is your router, and that's where all this
+
+information comes from.
+
+So when you're working with computers, the most important thing to remember is number one, you're
+
+going to have to have an IP address.
+
+Number two, you're going to have to have a subnet mask.
+
+And number three, you're going to have to have a default gateway because all of these guys work together
+
+to make sure your data goes where it needs to go.
+
+ 
+
+ 
+
+The most important thing to remember about the internet is that every single computer on the internet
+
+has to have a real IP address.
+
+Now if we've got lots and lots of computers out there with IP addresses, we can't just go throwing
+
+our own IP addresses in there.
+
+We can't just make up our own little network IDs.
+
+There has to be some kind of organization that takes a look at all the IP addresses that are possible
+
+and starts passing them out.
+
+And there is, and that group is called the eye and the eye, and a is the internet assigned numbers
+
+authority.
+
+Their job is to keep track of all of the IP addresses out there and to pass them out to folks who need
+
+them.
+
+Now, as you can imagine, this is a big job.
+
+In fact, it's a worldwide job.
+
+So the INR does not pass out IP addresses directly to the people who need them.
+
+Instead, what they do is they pass out chunks of these to the regional internet registries or the writers.
+
+Now there's a number of these different writers all over the world, and they're broken up geographically.
+
+So for example, if you're in Africa and India IP addresses, you go to the African Network Information
+
+Center.
+
+If you're in the United States or Canada, you go to the famous air and the American registry for internet
+
+numbers.
+
+If you're in Asia or Australia, you go to the Asia-Pacific Network Information Center.
+
+If you're in Latin America, the Latin America and Caribbean Network Information Center.
+
+And then if you're in Europe and Russia, I don't speak French, but it's called ripe and it looks something
+
+like this.
+
+Now, what's interesting is that in most cases, unless you were really big organization, you didn't
+
+even get your block of IP addresses from one of the writers.
+
+Usually, those guys simply passed out big chunks of IP addresses to internet service providers.
+
+So if you needed a network I.D., what you did is you didn't go to I.A. or Ayers or any of those guys.
+
+What you did is you went to the guy you were connecting to your internet service provider.
+
+So back in the old days, you would say, Hey, internet service provider, I need a network ID.
+
+Then you'd probably get some letter.
+
+And it would say something like, Dear Mr. Myers, thank you for selecting IP Supercenter as your internet
+
+service provider per your request.
+
+We are pleased to provide you with an IP address block that will meet the requirements of your organization.
+
+Your assigned network IP address is one six zero two five zero dot zero with a whacked 16 subnet mask.
+
+Your upstream Browder's IP address is one six zero Dot two six got one your primary public DNS servers
+
+IP address?
+
+We look forward to serving your internet access needs in the coming months and years.
+
+Sincerely, Winifred Fred P. Farber Force.
+
+The problem here is that how do we organize all this?
+
+How do we make all this happen?
+
+And the answer was pretty straightforward.
+
+What would take place is that based on your needs, you would go to your ISP and say, Hey, I need
+
+a big old network ID that can support lots and lots of computers.
+
+So to organize all this, we used something called class licenses.
+
+Now there are a number of class licenses, but the three I want you to know about our number one Class
+
+AA Class A was any number that went started with zero to 126.
+
+And that was a whack eight.
+
+So, for example, you could have 14.0 dot 0.0, which gave you sixteen point seven million IP addresses.
+
+Now, as you can imagine, not too many individuals got class A's.
+
+Those were usually passed out to like Comcast or somebody like that who had lots and lots of customers.
+
+The next type of class was Class B.
+
+Class B's always start with a one twenty eight up to a one ninety one, and they're a whack 16 address.
+
+With a Class B, you'd get about sixty five thousand five hundred thirty four IP addresses about.
+
+That's exactly what you get.
+
+Last is Class C.
+
+Now, Class C always starts with a one ninety two up to a 223.
+
+And these are always whack twenty four.
+
+So you would just have a number like, for example, one ninety three point forty four point sixteen
+
+whack, twenty four or 220 Dot seventeen dot 101 whack twenty four.
+
+But those first values, and that's what was always important, is that you can always tell a Class
+
+A, Class B or Class C simply by memorizing the first number in the Octet.
+
+Now we're running into a problem already.
+
+You see, the issue is, is that if I want to get on the internet and I've only got five or six computers,
+
+the smallest amount they can give me based on the in-a class licenses would be a whack.
+
+24, which means I have two hundred and fifty four host.
+
+Well, what if I don't need that many?
+
+Well, tough.
+
+That's what you got back in the old days.
+
+Now it's actually interesting because back in the old days, we didn't worry about that because, you
+
+know, there was only maybe a couple of million computers on the internet didn't.
+
+Who's ever going to think we'd ever have more than that?
+
+Yeah, they messed up.
+
+But.
+
+Class licenses worked, so you would get your class license and then you would apply it to your network.
+
+Now we're going to pretend for a moment Dream Total Seminars is this huge megalopolis company and I've
+
+got total seminars headquarters in downtown Houston, and I've got a big satellite construction office
+
+and total seminars in Galveston, Texas that I've got a big educational complex in another part of Houston.
+
+And I've got a big sales group in another part of Houston.
+
+So I've got all these big organizations.
+
+And what's happened here is I went out and got, let's just say I went out and got a Class B address.
+
+So what I want you to do is take a look at this board right here, and I'm going to show you a little
+
+problem.
+
+So if you take a look at this, this is what I have allocated for my ISP.
+
+They've given me a Class B.
+
+It's one sixty twenty five.
+
+I can do anything I want here because it's a wack sixteen.
+
+Now, the problem is, is total seminars is this huge organization I don't want to plug every computer
+
+from every department into one huge switch.
+
+I want to be able to take one network I.D. and break it up or subnet it into lots and lots of little
+
+network IDs.
+
+And this is the process that we call subnet.
+
+So what we're going to do is we're going to take my one Class B address and we're going to chop it up
+
+and let me show you how that happens.
+
+So I'm going to put this little bamboo skewer here because it always helps me remember we're the ones
+
+part of the subnet ends and the zeros part starts.
+
+So what I have here is my WXW 16.
+
+So what I'm going to do is this I'm going to actually change my WXW 16 into a whole bunch.
+
+Of whack 24s.
+
+Let me show you how this works.
+
+So what I've done here is I have submitted by one WXW 16 subnet into a whole bunch of whack.
+
+Twenty four.
+
+So for example, I remember these can't change.
+
+So let me get rid of this for a minute so I can have.
+
+For example, just one subnet would be one sixty point twenty five dot one whack twenty four.
+
+But remember, I have complete control on this so I can do things like this.
+
+So what I've done here is shown you some representations of all the different subnets I have now.
+
+In fact, I could pretty much take this away because now what I have is I can have subnet one six zero
+
+eight 5.0 all the way from one six zero twenty five to fifty five.
+
+Now you've got to be careful here with a real IP address, something you actually put onto a computer.
+
+You can't end with a zero or two.
+
+Fifty five subnets, though, can certainly have zero or 255, so I could have a one ninety three dot
+
+one sixty eight point two fifty five whack twenty four subnet.
+
+That's OK.
+
+Now let's keep looking, though.
+
+So just for fun, see, I threw in two possibilities in here.
+
+So this is just two of two hundred and fifty six different possibilities we'd have in there now.
+
+Keep in mind the example.
+
+I gave you a total seminars we only had, I guess, basically four big areas that I wanted to have their
+
+own network IDs for.
+
+But in this case, by subnet, by moving to the next class license again, it's very, very wasteful
+
+because I've made 256 new network IDs and I only needed four.
+
+So that was a big problem with class for subletting.
+
+And the reason that something new started to come up.
+
+I want you to watch this.
+
+This is just a little bit of a teaser.
+
+So pretend for a moment, we're back to our original concept.
+
+Now I want to show you something because all the stuff that we've done so far is just moving from whack
+
+16 to whack twenty four.
+
+But what if I did something like this?
+
+Oh, wait a minute, Mike.
+
+These little dots are what are the places we're supposed to make subnets?
+
+Yeah.
+
+Well, you don't have to do it that way.
+
+Take a very, very close look at what's happening here.
+
+Notice that the subnet mask, I'm going to take this out because it's not a zero right now.
+
+Notice it's a subnet mask is what a subnet mass has to be.
+
+All one's followed by all zeros.
+
+Your computer doesn't look at those dots.
+
+Those dots are only there for human beings because a long, long time ago, we thought it would be convenient
+
+to break everything up into Class A, Class B and Class C.
+
+But the reality is, if you look at this, we can actually make subnets that are not based on the DOT.
+
+Now, in order to enjoy that, I've got a couple more episodes coming up on what we call class lists
+
+subheading.
+
+
+
+If you watched my episode about class will subletting, you recognize that the lords of the internet
+
+kind of messed up when it came to breaking up all of our IP address network IDs and adjust Class A,
+
+Class B and Class C, we need a way that gives us a more granular control over how we take one subnet
+
+and chop it up into lots of little subsets.
+
+And we do that through something known as class lists, inner domain routing or better known as Sidr.
+
+Now, Sidr has been around since around the mid 90s, so this isn't anything new, but it is a very
+
+powerful tool and a little bit complicated.
+
+Now, if there was ever an episode where you're going to be hitting that pause button, it's going to
+
+be this one.
+
+This is something you're probably going to watch two or three times and pause and calculate.
+
+This is not an intuitive idea, but you can get it, and it's very cool and it's something that everybody
+
+uses.
+
+Now we've all seen an IP address.
+
+So if we take a look at an IP address, a one six, 0.25 that to a short one, we recognize by now that
+
+those dots don't really exist.
+
+They're simply there for human beings.
+
+Now, as a good analogy, let's put up a phone number.
+
+How about I don't know?
+
+Two eight one five five five one two one two.
+
+Now, if you take a look at this phone number, you're going to see we've got an open parenthesis and
+
+a close parenthesis and a dash.
+
+Do you actually when you're dialing somebody's phone number, do you press open parentheses?
+
+Two eight one close parenthesis?
+
+Of course not.
+
+If you want to see what a phone number looks like to your telephone system, let's get rid of all that
+
+junk.
+
+And with just the numbers, that's what a telephone number really looks like.
+
+So let's go back to our IP address now.
+
+Right now, if we take a look at an IP address as humans, it's going to say one six zero dot to dot
+
+one.
+
+But if we wanted to see it in the way that a computer really sees it, it's going to look something
+
+like this.
+
+And that's the important thing to remember.
+
+There really aren't any dots.
+
+All of this is this dotted decimal notation is simply a way to make these IP machines easier for us
+
+to use.
+
+So with that understanding in mind, let's dive into the idea of cider.
+
+Now, the thing I want to stress about Sidr is that we don't necessarily do a lot of subletting ourselves,
+
+but we enjoy the benefits of subletting.
+
+Subletting is often most commonly done by internet service providers.
+
+Let me give you a great example.
+
+I'm Comcast and I've got one Class C address, and I've got a number of customers all around that need
+
+their own static IP addresses their own network ID.
+
+But none of them need that many.
+
+I mean, maybe one person needs about one hundred and twenty.
+
+Another person needs six.
+
+Another person needs forty five.
+
+What I can do with subletting if I do it right is I can take one say, for example, a Class C and chop
+
+it up.
+
+And that's what I want to do right now.
+
+So let's take a look at the example I have right here on the table.
+
+So what I have is a Class C address that I Comcast got from my RR or maybe my own ISP, because ISPs
+
+have ISP's also.
+
+And what I have is a Class C address to await twenty five, 160 zero.
+
+So I have this entire network ID.
+
+And obviously it's a whack 24 there.
+
+So what I need to do here is begin to chop this up using Seider.
+
+Now, if you were watching the class full subletting, you're going to see we pretty much do it the
+
+same way, but we just don't move the stick as much.
+
+Watch very, very closely.
+
+So I always put a stick in just because it's always easy for me to take a look at this and I remember
+
+where my subnet ends.
+
+So what we're going to do?
+
+Is what I'm going to move my subnet over by just one.
+
+So let's get rid of this white bead and make him a one now.
+
+And what I've done is I've taken a whack.
+
+Twenty four.
+
+And I've turned it into a whack 25.
+
+Now this always seems kind of interesting to people, because when you first exposed to this, you think
+
+all subjects have to be to fight fires and zeros.
+
+No subjects have to be a string of ones, followed by a string of zeros.
+
+So what I've done is I've taken my whack.
+
+Twenty four to five five two five five two five five zero and turned it into a whack.
+
+Twenty five two five five two five five two five five one twenty eight.
+
+So you've got to be careful when you start getting the decider.
+
+You start getting away from the dots here and you start dealing with subjects that have funny numbers
+
+like this.
+
+So anyway, let's go ahead and see what happens as a result of this.
+
+So what happens now is that we have two different network IDs.
+
+We can have one set of network IDs that's going to be a zero here, and we have another set of network
+
+IDs that can be a one.
+
+So let's go through both of these real quick.
+
+So what you'll see here is by moving over the subnet mask one bit here we have control over what goes
+
+here.
+
+It's either going to be a zero or a one.
+
+So if it's zero, we have a whole new subnet called to await twenty five one 60, and that goes from
+
+all the way to from one all the way to 126.
+
+So take a moment and look at that, so now that is one block of addresses.
+
+If I change this to a one.
+
+I now have to wait twenty five, one sixty, but this time it goes.
+
+From 129 to 250 for.
+
+So by moving my subnet mask over one bit from a whack twenty four to a whack twenty five, I've taken
+
+one Class C address and I've made it into two subnets and these are totally separate subjects.
+
+I can put them right next to each other.
+
+They can route them and I can do anything that I want to do.
+
+So this gives me a lot more granularity instead of just being locked down to two hundred and fifty four
+
+host.
+
+Now each one is two to the seventh power, so it's one hundred and twenty eight minus two is one hundred
+
+and twenty six hosts on two different networks.
+
+Then that's just one chop.
+
+Let's move it over one more time.
+
+So this time, what I'm going to do is I'm going to move it over two times, so remember we moved the
+
+subnet over twice.
+
+So instead of being a whack twenty five.
+
+It's now a week twenty six, and the subnet mask is 192.
+
+So this is where things get interesting, because now we have four different combinations of network
+
+I.D. in here.
+
+All right.
+
+So we've got zero zero zero one one zero and one one.
+
+So in essence, what we've done here is we've taken one subnet and we've broken it up into four subnet.
+
+So let's go through the process and let's see what we've actually generated here.
+
+So the first one is going to be two eight, 25, one 60 and the first two bits are going to be zero.
+
+So this is going to go from all the way from one.
+
+Do you see that zero zero zero zero zero zero one two zero zero one one one one one one one zero.
+
+So that's going to be one to 62.
+
+That's the first subnet we've generated, but there's three more.
+
+Let's let's take a look at them all.
+
+So what I'm going to do now.
+
+Let me move this out of here.
+
+So now we're going to look at zero one.
+
+So with zero one, we go from two eight two five one six zero one five zero zero one two zero one.
+
+Five ones in a zero.
+
+And that is sixty five to one, twenty six, that's our second one.
+
+Let's keep going.
+
+We're on a roll here.
+
+So now what I'm going to do is take a look at one zero.
+
+So this time we're going to go from one zero five zeros in a one to one zero five ones and a zero.
+
+And in this case, we've created the third subnet, which is going to be two eight, 25, 160, 129,
+
+two 190.
+
+And last.
+
+With two ones, we go from two eight two five one six one one zero zero zero zero zero one two one one
+
+one one one one one zero.
+
+And in that case, what we're going to be taking a look at.
+
+Is from 193 to 250 for.
+
+Now, what I've done here is I've only subbed, edited down twice, I've taken a whack twenty four and
+
+I've made it a whack twenty five, which gave us two network IDs and then I did it again, which gave
+
+us four network IDs.
+
+The important thing to remember, though, is that the more you subnet something, the less hosts you
+
+have.
+
+So with a whack twenty four, I had two hundred and fifty six minus two, two hundred and fifty four
+
+hosts, but with a whack twenty five, I only have one hundred and twenty eight minus two or one hundred
+
+and twenty six hosts.
+
+And then if you take it down one more where I'm going down to a whack twenty six, it's now it's going
+
+to be sixty four minus two or sixty two hosts.
+
+So the more you take one subnet and you subnet it down even more, the smaller the number of hosts you're
+
+going to have.
+
+In fact, we can go way past whack.
+
+Twenty six when you whack 27, 28, 29 all the way down, if we want to, but we've talked a lot here.
+
+I need you to take some time right now and kind of play with this in your head a little bit.
+
+We've got a whole other episode with a lot more practice on it, with more subletting with Sidr.
+
+
+So I'm assuming you've watched the episode on Sidr and you're here just to get a little bit more practice.
+
+Well, good for you.
+
+Now before we get into this, I want to make sure you understand why this is taking place.
+
+Most people, if you look at their houses, when they connect to the internet, they just got some little
+
+router from Comcast or AT&T or whoever your ISP is.
+
+Now these addresses that are given to you by the ISP are what we call dynamic.
+
+They change from time to time, but I'm going to come up with more realistic scenarios for businesses.
+
+If you've got a web server or a game server or an email server, just about any kind of server that
+
+people need to get to.
+
+You need to have a fixed or static IP address.
+
+Now we have an entire episode on dynamic versus static addresses, but for right now, we need to make
+
+sure that we understand how subletting allows us to take static IP addresses and assign them to computers
+
+that need to be seen on the internet.
+
+So before we get into that, let me give you a particular scenario where we run into this all the time.
+
+Let's say I'm starting up a little game server company and just starting out, so I've only got four
+
+servers, and these servers all need real honest to peak IP addresses from the internet.
+
+So I can't use just a little connection, like most folks use in their homes.
+
+I need to get what we call static IP addresses.
+
+I need my own network ID.
+
+And this is where Seider really comes into play.
+
+Now, in this case, I only need four separate IP addresses, so Seider does have some limitations.
+
+So what I want to do, first of all, is have you take a look at the subnet mass if you remember a whack?
+
+Twenty four always gives us two hundred and fifty four hosts.
+
+So what I wanna do is march down through all the subnet from whack.
+
+Twenty four all the way down, and let's memorize the number of hosts you get for each one because it
+
+helps us determine how small of a or subnet we need if you know the number of hosts that you need.
+
+So let's go ahead and march through the process.
+
+So what I have right here is a standard whack twenty four subnet.
+
+So I've got twenty four ones, followed by eight zeroes.
+
+So we call it a wet twenty four and it has two hundred and fifty four addresses a week.
+
+Twenty five has twenty five ones, followed by seven zeroes, so that's two to the seventh power, which
+
+is one hundred and twenty eight, but minus two.
+
+You can't have all zeros and all ones and you get one hundred and twenty six hosts a whack.
+
+Twenty six has twenty six ones, followed by six ones and zeros.
+
+So with just these six, it's two of the six power, which is sixty four minus two is sixty two.
+
+A whack twenty seven is going to be twenty seven ones, followed by five zeros.
+
+Five zeros is two to the fifth power minus two or thirty hosts a whack.
+
+Twenty eight subnet is twenty eight ones, followed by four zeros.
+
+So two to the fourth power is 16 minus two is 14 hose.
+
+With a whack 29, we've got twenty nine ones, followed by only three zeros.
+
+So two to the third power is eight minus two is we can only have six hosts with a whack.
+
+Twenty nine a whack 30 has thirty ones, followed by two zeros, which is two to the second.
+
+Power is four minus two is only two hose and a whack.
+
+Thirty one is thirty one ones, followed by one zero.
+
+So that's a two to the first power equals two minus two equals zero.
+
+So we really can't do a whack thirty one.
+
+It's really important that if you remember your subnet sizes, you can pretty much instantaneously know
+
+the number of hose.
+
+So I'm going to have to reference here.
+
+Like, for example, if I know I need four computers only for static IP addresses, I'm probably going
+
+to go with a whack 29 because that gives me six.
+
+The next one down only gives me to the next one up, gives me 14.
+
+So it's not a perfect match, but it's a lot better than using class full addressing.
+
+So if you can remember your subnet, at least from whack twenty four down, that's going to help you
+
+quite a bit.
+
+Now, keep in mind, everything I'm doing here is whack.
+
+Twenty four down, however, I mean, we could do a whack 10 or whack 11 whack 12, but go ahead and
+
+get started with this.
+
+Be comfortable with starting with a whack twenty four and subletting it down.
+
+And that's a really good place to start now.
+
+That's great, but the next thing I want to do is let's go through a couple of examples.
+
+So let's start with example number one.
+
+The first example is the one I alluded towards earlier.
+
+I've got a small game server system and I need four IP addresses for the four servers sitting on a rack
+
+here in my company.
+
+Now Comcast is my provider and Comcast business does a great job.
+
+I love them.
+
+No advertising.
+
+I like Comcast.
+
+So I actually go on to their web site and I see a page that looks something like this.
+
+So what they're basically saying is they'll give me one IP address, they will give me five IP addresses,
+
+or they'll give me 14 IP addresses.
+
+What are they talking about?
+
+So I've got a little setup here.
+
+So here are my four game servers.
+
+The thing you've got to remember was static IP is that you always have an IP address for your router.
+
+Now, normally in our home networks, the routers sitting right there, Comcast or AT&T, whoever it
+
+is, gives us that router.
+
+But in this case, what we're doing is we're hooking up to a router upstream someplace.
+
+So what they're telling us is that instead of giving us six addresses, they're keeping one of the addresses
+
+for their upstream router, and that's where the five comes from.
+
+So in this case, what they're talking about is they're going to be giving us a whack.
+
+29 Just like you see here, one IP address is safe for their router, and that gives me five IP addresses
+
+for my four gaming systems.
+
+Yep, I have one extra IP address, and that's just how this stuff happens.
+
+It's not exactly perfect.
+
+So, you know, that was fun.
+
+Let's try it one more time with.
+
+Example number two.
+
+So in this example, I'm actually going to take advantage of Comcast deal to give me some IP addresses,
+
+so I told them that I need a number of IP addresses.
+
+Let's make it a bigger number.
+
+Let's say I need eight IP addresses as an absolute minimum, so I call them up on the phone and four
+
+thirty nine, ninety five extra a month.
+
+I get a letter like this.
+
+Dear Mr. Myers, thank you for selecting IP Supercenter as your internet service provider for your request
+
+for eight static IP addresses.
+
+We are pleased to provide you with an IP address block that will meet the requirements of your organization.
+
+Your assigned network IP address is one nine nine six four four six six eight eight zero with a wax
+
+twenty eight subnet mask.
+
+Your Upstream Routers IP address is one nine nine six four four six six.
+
+Got eight one.
+
+Your primary public DNS servers IP address is one nine nine six seven five six seven six Dot eight,
+
+and the secondary DNS server is one nine nine six seven six six seven seven six eight eight.
+
+Should you require assistance, you may contact our technical support by email at Support and IP Supercenter
+
+dot com.
+
+We look forward to serving your internet access needs in the coming months and years.
+
+Sincerely, one of our key five reports.
+
+What the heck does that all mean?
+
+Well, it's actually very simple.
+
+All you need to do when you get information like this is to write down the subnet mask and the network
+
+ID supplied to you from the actual ISP.
+
+So that's what I've done right here.
+
+So I went ahead and I put down the subnet mask, which is a whack twenty 28, and then I wrote down
+
+the Network ID.
+
+Now, if you remember in other episodes, I always say the Network ID has to end with a zero.
+
+Well, it really does watch this.
+
+So we know it's a whack 28, so let me put my little piece of bamboo in here and you'll see the Network
+
+ID actually does end with a zero.
+
+Do you see those four zeros?
+
+So to get the real IP address, we're done with this part.
+
+Now all we've got to do is we're in control of these four digits so it can go from anywhere from all
+
+zeros.
+
+To all ones now, wait a minute, it can't be all zeros and all ones, you always have to subtract two.
+
+So I'm just going to cheat and do this.
+
+So I go from.
+
+Eighty one.
+
+To Ninety Four, which means I have the IP addresses of one ninety nine, forty four six dot eighty
+
+one all the way to one ninety nine forty four dot six ninety four.
+
+You might want to pause and double check the math there to make sure it makes sense to you.
+
+Now, keep in mind that the ISP has to reserve one of those IP addresses for themselves, and that's
+
+why they went ahead and said one ninety nine forty four six point eighty one is going to be my gateway
+
+router because they hold on to that because that's how all of my computers are going to connect.
+
+Now this is just two examples of subletting, but these are two of the most common types of examples
+
+you're going to see out there.
+
+You might want to play with this a little bit more, get a little bit more practice, so you two will
+
+be comfortable with Sidr subletting.
+
+
+
+Every computer on your IP network has got to have IP address settings.
+
+In particular, it needs to have an IP address.
+
+It has to have a subnet mask and it has to have a default gateway.
+
+Now, this information has to be put in there somehow.
+
+So you've got two choices.
+
+The old fashioned way is statically.
+
+You literally go up to the machine and you find the right configuration screen and you type all this
+
+information in.
+
+There's nothing wrong with that.
+
+And a lot of times that's the best way to do it.
+
+However, the alternative is to let it happen automatically.
+
+Now there are two terms.
+
+One of them is D, C, P, or dynamic host configuration protocol.
+
+And the Linux people tend to use the term boot p.
+
+So either one of these terms are pretty much interchangeable.
+
+And what it means is that when your computer first boots up in the morning, it doesn't have any IP
+
+information at all.
+
+What it needs is something called a DHCP server.
+
+Let me show you what I mean.
+
+So here's my happy little network here.
+
+So I've got this is my computer right here, and it's turned off right now.
+
+Now I've got a router and I've got a block.
+
+You haven't seen this in previous episodes, but this is going to be like Windows Server or something
+
+like that.
+
+Now you'll notice that they're all on one broadcast domain.
+
+They're all hugging off the same switch.
+
+So if one person broadcasts, everyone else can hear it.
+
+DHC P manifests most times as a server.
+
+Now this DHCP server can be special software sitting on certain computers, but most home routers also
+
+have DHCP server capability.
+
+Your individual computers need to be CPP clients.
+
+Now, assuming that the DHCP servers are running, this is pretty much what takes place when you first
+
+boot this computer up.
+
+He will begin sending out a broadcast called a c p discover.
+
+And now at this point your computer doesn't have an IP address or any IP settings at all, so it just
+
+sends out a broadcast on the MAC address of all FS to all these computers and it's looking for DHCP
+
+server.
+
+Now I'm going to say that I've got DHCP server software running on this is a Windows server system.
+
+So DHCP servers are designed to respond to these broadcasts and what it'll do is send unicast traffic
+
+back.
+
+Keep in mind this is a broadcast, but when this guy gets it, he knows this guy's Mac address.
+
+So what he's going to do is send the unicast traffic straight back to him with what's known as a DHCP
+
+offer.
+
+So we start off with a DHCP discover which is a broadcast and then a DHCP offer which is a unicast right
+
+back to it.
+
+This has all the information in it.
+
+It's this is here's an offer.
+
+This is the IP address I want to give you.
+
+Here's the subnet mask, here's the default gateway.
+
+There's even other stuff.
+
+But right now, we'll stick with the basics.
+
+Now, when your computer hears that, what he's then going to do.
+
+It's going to go.
+
+Okay.
+
+I'll take that.
+
+And he'll send what's known as a DHCP request back to the dhcp server.
+
+When he does this, he's basically telling the DHCP server.
+
+Yep.
+
+I'm going to take this information that you're giving me and I'm going to use it.
+
+Once the DHCP server hears that.
+
+He sends a DHCP acknowledgement which says, okay, we're going to do it.
+
+And once this takes place, the DHCP server will store all of this information in there and he'll keep
+
+track of all of the different clients that are out there that are using DHC CPP.
+
+So the important thing to appreciate about DHCP is that you've got to have a DHCP server.
+
+Anybody who's got a home router, almost all those have DHCP servers built in.
+
+And we also have DHCP servers that run with just about every different operating system too.
+
+So the trick is, number one, if you're going to be using the HDP, only have one DHCP server.
+
+Remember, DHCP servers are designed to respond to broadcast.
+
+So if you have two running and they're passing out different information, that would be what we call
+
+a bad thing.
+
+Secondly, the other thing you need to appreciate is a DHCP servers have to be within the broadcast
+
+domain.
+
+You can't have a DHCP server outside of your network that your network responds to.
+
+So the DHCP server has to be part of your own little network.
+
+
+There are a number of very special IP addresses that you need to be able to recognize for the exam,
+
+so I want to go ahead and in this episode, run through all of these.
+
+So the first thing I want to talk about is possibly the most complex one.
+
+And that's what we call private IP addresses.
+
+There are three different groups of IP addresses that are only used in private networks.
+
+You'll never Google to one of these addresses.
+
+You're never going to get on your Office 365 to these addresses.
+
+These are used on internal networks for systems that never do any sharing.
+
+Well, be careful with that.
+
+They might be sharing within their local network, but they're certainly not sharing out to the internet.
+
+There are three different groups of private IP addresses.
+
+The first group is any IP address that starts with a 10.
+
+If you see an IP address that starts with a 10.
+
+It is a private IP address.
+
+You'll never see this out in the real wild internet.
+
+The second group is any IP address that goes from one seventy two point sixteen dot, whatever to one
+
+seventy two dot, thirty one dot, whatever.
+
+This group of IP addresses is also only four private networks.
+
+And the last one, I'll bet some of you out there will recognize any IP address that starts with one
+
+nine two one six eight and then the other two values don't really matter.
+
+But when you see that one ninety two one sixty eight, what you're looking at in that situation is a
+
+private IP address.
+
+Now a lot of people go Now, wait a minute, Mike.
+
+I have seen that one 90, two one sixty eight and the computer I was on was able to get to Google.
+
+That's right.
+
+But nobody could get to you.
+
+I understand there's a big difference there.
+
+When you're using these private IP addresses on computers that get out to the internet, you're usually
+
+work well, you're not.
+
+Usually you are working behind a very specific type of device covered in other episodes called a net
+
+device, which kind of just hides you from the big, scary internet.
+
+OK.
+
+The next type of special address I want to show you is called a loopback.
+
+Now a loopback means basically talk to myself and back in the old days we would use, I've got a device
+
+right here.
+
+Can we get a little peek at that?
+
+So this is what's known as a loop back.
+
+And this little loopback adapter is something I'll show in other episodes.
+
+But what we would do is we would plug that in and then we do something like this.
+
+Watch this.
+
+So I'm going to go ahead and Ping.
+
+See this right here.
+
+This is the loopback address 127.0.0.1 in IPv4 that allows us to reference ourselves.
+
+So basically what you're doing here is you're just pinging yourself.
+
+Loop back in the old days when you had little adaptors like that, it would actually go out and come
+
+right back in, and it was really a good way to be able to test network cards.
+
+That's really no longer true.
+
+Loopback doesn't have nearly the usage that it used to have because most network cards today, if they
+
+see a loopback address like that, they just test their own internal circuitry.
+
+Now, 127.0.0.1 is the loopback.
+
+But watch this so I'm going to type in one 27.0 dot three dot sixty seven.
+
+And that works also.
+
+So what really happens now for the exam, make sure you know it's 127.0.0.1.
+
+But in reality, you can type in one twenty seven dot anything and it will always loop back.
+
+So in my opinion, one twenty seven, the entire network idea of 127 is the loop back.
+
+But you know, for the exam 120 7.0, that's 0.1.
+
+Now we also cover IPv6 and we do tons of this and other episodes.
+
+But right now, what I want to show you is the loopback address just for IPv6.
+
+So I'm going to backspace this out colon colon one and watch this.
+
+Now you'll see how it replies back.
+
+And that is, if you have IPV six, you can use that as your loopback address.
+
+OK?
+
+The last one I want to talk about is something called a Pippa.
+
+Now most of these computers we use today use DHCP.
+
+We don't manually type in IP addresses into our individual computers.
+
+So when this guy boots up in the morning, the first thing he's going to do is go, Hey, somebody,
+
+give me an IP address and a DHCP server somewhere out in the world is going to respond back with IP
+
+address information form.
+
+However, there are situations that's rare where a DHP server goes down.
+
+The idea of an a Pippa address simply means, Look, if you can't get a DHCP server, we will give you
+
+an address.
+
+So at least you can talk locally.
+
+You will be able to go on the internet, but you'd be able to share folders and files and stuff like
+
+that.
+
+Pippa addresses always start with one sixty nine to fifty four, and then each individual computer will
+
+randomly generate the next two values.
+
+So there is a sixty five thousand five hundred thirty six in one chance that somebody could roll the
+
+exact same two values.
+
+But it doesn't happen very often, and that's why Mike doesn't play the lottery.
+
+What I've done here is I've opened up good old control panel and I'm under my network and sharing center.
+
+So right here where it says change adapter settings.
+
+So this is the card I'm interested right now.
+
+The built in Ethernet for this guy.
+
+Oops.
+
+And let's go to properties.
+
+And down to TCP IP version four and properties again.
+
+Now this is where you set all your DHCP information, but there's another tab there that nobody ever
+
+looks at.
+
+So this one right here alternate configuration.
+
+See what it says, automatic private IP address.
+
+And that's where that little setting comes from.
+
+If you leave that as it is, it's going to give you the Pippa automatic private IP address.
+
+It will give you an A. Pippa address if the DHCP servers down and you're going to see scenarios on the
+
+exam where, you know, Janet is working on this stuff and she can't get to anybody but local staff.
+
+She runs a command and sees that her addresses one sixty nine to fifty four dot something.
+
+It means the DHCP server is down for the exam.
+
+Make sure that you're comfortable with these different types of private IP addresses, with loopback
+
+addresses and with a Pippa because not only are they on the exam, but this is an important thing for
+
+any good network technician to know.
+
+
+There's a number of scenario type questions on the exam that deal directly with issues when it comes
+
+to IP addressing.
+
+So in this episode, I want to go through some scenarios and we're going to talk about how we deal with
+
+these particular issues that come up on the exam.
+
+So let's start off with a couple of wacky ones in this particular case.
+
+I've got a very simple network here.
+
+This is a standard net router, so it's passing out private IP addresses.
+
+So this router is also a DHC server, and I've got two computers just for fun.
+
+I'm going to say this one is running Windows 10 and this one is running Ubuntu.
+
+Linux.
+
+So this is my initial setup, so what I want to do is first talk about a situation that does come up
+
+every now and then a duplicate IP address.
+
+Now, obviously, all the different computers inside my network would want to have different IP addresses.
+
+And if we're using DHCP, it will do a very good job of never passing off the same IP address twice.
+
+But there are situations where it accidentally could happen.
+
+Situation number one, if we had for some terrible reason, a rogue DHC server on here, it could be
+
+passing out identical IP addresses.
+
+This would be a very bad thing, so I'm going to take that out for a moment.
+
+The other thing could happen is when we set these boxes up statically if they were internal servers
+
+or something.
+
+It's pretty common to set these machines up statically if you get a duplicate IP address.
+
+It really varies by the operating system.
+
+What's going to happen?
+
+Windows 10, for example, it'll bring up an error.
+
+And in fact, I've got an example of that error right here.
+
+You'll see by looking at this that Windows 10 has detected that there's a problem and it's automatically
+
+going to try to fix it.
+
+What it's really trying to do is it doesn't like your static IP address and it's going to turn it off
+
+and try to set itself to DHCP so it can fix it.
+
+So with Windows, if there's a duplicate IP address, it's going to fix it.
+
+There's never really an error because it just comes up and says, Here, let me fix it for you.
+
+With Ubuntu and other operating systems, I'm not going to say Apple products in this particular one,
+
+I'll just stick to Linux.
+
+They don't give as easy of an error to detect in these cases.
+
+You're not going to be able to get any data back in a way that you trust it.
+
+You literally will have two different systems with two different IP addresses.
+
+So if you were to say try to open a web browser when the Google page tried to come in, the router wouldn't
+
+know who to send it to because there were two different computers with the same IP address, so we'd
+
+be seeing failure scenarios.
+
+The best thing you can do in this situation is no one know your network, so I'm going to say that the
+
+network IDE for this entire network is going to be 190 to 168.
+
+Four.
+
+And then everybody else has a different last number.
+
+I know that because I set it up because I track it.
+
+So if I go into windows and then I open up a command line and I run IP config, let's take a look at
+
+that real quick.
+
+I can see where my IP address is.
+
+OK.
+
+Nothing wrong with that IP address that would fit within that network, I'd.
+
+Now on Ubuntu, what we can do is open up a terminal and run I.F. config.
+
+Now if we run if config, which is pretty much similar to IP config notice here in this example, if
+
+I have config, I've got a one nine two one six eight four oh thirty six.
+
+Here's an example where by simply running commands, I see that I have duplicate IP addresses, so thank
+
+you windows for letting me know that there's a potential problem there.
+
+But the reality is is if these are things that I'm setting statically, I want to go in and correct
+
+it.
+
+So good bookkeeping is the other thing to do here in my company.
+
+Any time we set a static IP address, we have a primary database that lists all those, so there's never
+
+any confusion.
+
+OK, now sticking with this, let's stay with our same scenario, except this time.
+
+Let's say we have duplicate Mac addresses now to every network.
+
+Card in existence comes with a unique Mac address from the manufacturer.
+
+Where duplicate Mac addresses often come into play is when you're working with virtual machines.
+
+So let me show you an example of one virtual machine that I'm setting up.
+
+I'm doing what's known as a clone process.
+
+Take a look at this picture right here.
+
+If you look in this picture, you'll see, as I clone it, it's asking for a Mac address.
+
+So if I want to, I can type in any Mac address that I want.
+
+Knowing that we can type in different Mac addresses is great, but with a virtual machine, I could
+
+accidentally and quite easily I might add typing the exact same Mac address for two completely different
+
+virtual machines.
+
+In that case, good luck because what's going to be taking place is that your virtual eyes switch or
+
+whoever is trying to send the Ethernet frames to the individual virtual machines is going to be very
+
+confused.
+
+Switches don't like it when they store the two identical Mac addresses for different ports, and they
+
+will often simply default into hub mode.
+
+The bottom line is is that you're not going to be getting data coming in, you're not going to be connected
+
+to the internet, you're not even going to be able to connect locally to individual computers.
+
+Here's where you have to know your VMS.
+
+In this particular case, you have done something to confuse the VM.
+
+Normally, when you make a new virtual machine, every virtual machine hypervisor keeps track of the
+
+Mac addresses and will change them for you on the fly.
+
+So you've had to do something intentionally wrong to make something like that happen.
+
+I actually had to do some research for duplicate Mac address as a problem and talking to some of the
+
+best techs in the country.
+
+The answer was it's really, really hard to detect.
+
+I'm going to talk about three more, which have some degree of similarity because most of them are either
+
+going to happen because of a DHCP error or because you've messed up something statically.
+
+Let's start with the easy one incorrect gateway.
+
+Now we know that every individual computer on a network has to have a gateway.
+
+So on this particular network, this is a for port switch with a router built into it, and the gateway
+
+on this theoretical network is going to be six eight four one.
+
+It's because I set the router up, and that's what I said the router is going to be.
+
+So now that I know it's one nine two one six eight four point one.
+
+If you have an incorrect gateway, it's going to be real obvious.
+
+You can't get out of your local network.
+
+Remember, your gateway is your routers IP address, and if you want to get outside your local area
+
+network, you have to have the right gateway address placed in there.
+
+You'd still be able to share folders and files within your network because they don't need the gateway
+
+to talk, but you wouldn't be able to get out on the internet.
+
+You wouldn't be able to go out there and do anything.
+
+Now there's a couple of dangers here, too.
+
+I could set up a rogue box with his own connection to the internet.
+
+And this guy right here could say, Oh, I'm one sixty eight dot for Dot, too.
+
+And now all of a sudden, as cops begin to reregister, guess what happens?
+
+This rogue box will start giving people different gateways than the one they want them to use.
+
+And you know what?
+
+It works.
+
+This is a very classic man in the middle attack.
+
+And the only real answer to something like this is you need to know what your default gateway is.
+
+Even my individual users know their default gateway, and I can tell anybody, Look, if you've ever
+
+got a problem, if you're in Windows Phone, ipconfig, if you're in Linux, run if config and see if
+
+any of the settings are not what you would expect them to be.
+
+Anybody who's working in the accounting department can be taught to do something like that, and they
+
+suddenly see a gateway that says for that too.
+
+They know that there's a big problem.
+
+So.
+
+Now, of course, I'm assuming you've got some good intrusion detection that would hopefully detect
+
+these guys pretty quickly, but that does happen.
+
+The main reason we get incorrect gateways more than anything else is because we type these things in
+
+statically and you've simply made a mistake.
+
+Instead of typing in 192.168.0.1, you typed in 192, 168 1.4.
+
+I mean, I've never done that.
+
+I mean, you know, mortals.
+
+So the reality is, is that these types of things happen.
+
+You've made some changes to your IP settings, and here's where you take a moment.
+
+Look, you've typed in these things.
+
+Click, Is everything working?
+
+No.
+
+Did I mess up?
+
+And you recheck your settings and make sure you've typed it in the right way.
+
+This also comes true for an incorrect netmask or an incorrect subnet mask.
+
+It's easy for us, especially if you start doing a lot of subducting and you're typing in your subnet
+
+mass of 255.255.255.0 192, things like that make it easy for us to make minor mistakes.
+
+The number one most important thing to always keep in mind is that all of the computers within the same
+
+broadcast domain will always have the same subnet mask.
+
+Always.
+
+There's no exception to that.
+
+So classically, what we'd see on a whack twenty four network like I have here is we'd be typing in
+
+two five five two five five two five five zero.
+
+The mistake a lot of us make, especially when it comes to operating systems like windows that when
+
+you're entering this stuff, it tries to fill it in for you ahead of time.
+
+Is that windows?
+
+For example, if I type in a Class B, I'm typing in a one seventy two point sixteen address.
+
+Windows will automatically type in two five five two five five zero zero.
+
+They're trying to be helpful, but what if you've subnet that and you wanted two five five two five
+
+five two five five zero?
+
+It's just so easy to make that little mistake.
+
+The downside to messed up subnets is that sometimes you can get through a little bit.
+
+For example, if this guy is accidentally said his two five five two five five zero zero and this guy
+
+said his two five five two five five two five five zero, which is what we want.
+
+He'll be able to ping him, but he won't be able to ping him because he'll see it as a different subnet.
+
+This is where ping me a little bit confusing.
+
+The trick is, is that if you've got two guys who can't talk, have them ping each other.
+
+If one can ping the other guy and the other guy can't.
+
+One of the things you're definitely going to have to consider is you typed in the wrong subnet mask.
+
+Another thing that I've never done, of course.
+
+All right.
+
+The last one I want to cover here is something that I got to be honest with you.
+
+I've never actually seen this in the real world.
+
+And this is what come to your calls.
+
+An expired IP address.
+
+OK.
+
+When a computer goes to a DHCP server, it gets a lease, and this lease is measured depends on the
+
+server.
+
+It's often like eight days in the Windows world.
+
+So once this guy gets his lease, he waits half of the lease period.
+
+So after four days, this guy will automatically kind of re-establish the lease and go back to the agency
+
+piece.
+
+Ergo, hey, can I keep that lease?
+
+And the DHP server pretty much always says yes, and the server will always give it back the same IP
+
+address never changes that.
+
+Except what if the DHCP server dies happens in this type of situation after four days?
+
+This guy is going to try to go back up here and there won't be a DHCP server.
+
+So if there is no DHCP server by default, you have expired your DHCP lease.
+
+The moment you can't see the ECB's server, it's expired.
+
+A DHCP server.
+
+If he can't talk back at halfway through that lease, he expires.
+
+So in this case, let's just say a wire was busted or something that DHCP servers up and running in
+
+that particular situation.
+
+It really varies on the operating system.
+
+For example, in a Windows system, if he tries to phone home after four days and can't get to anybody,
+
+he will keep that IP address anyway, at least through the time of the lease.
+
+Now keep in mind, if you reboot the computer, shut the system off and shut it back on again.
+
+Or even if you log off and log back in, you will in essence reset the lease.
+
+So that's not what we're talking about.
+
+We're talking about a server that just sits there.
+
+Twenty four, seven and then all of a sudden it needs that lease and it's not there for you.
+
+The bottom line there is that it's pretty easy to detect because it will either continue to work because
+
+it has a legitimate 192 168 four address of that network or at some point it's going to go a pip on
+
+you.
+
+And suddenly when you run IPconfig or it's this works also in Linux as well, if config, you're going
+
+to see that your address magically switches to one sixty nine point two fifty four.
+
+And in those situations, you've got an expired IP address, mainly because you can't get back to the
+
+CP server.
+
+You're going to see a lot of scenario questions that look like this on the exam.
+
+In particular, these are going to be misconfiguration issues, and it's a matter of trying to find
+
+where the problem is.
+
+The secret to these scenario questions is that come to you does a pretty good job of drawing you some
+
+kind of picture and take advantage of the picture itself.
+
+Obviously, you don't have virtual machines on a company exam, but you will be able to click on individual
+
+devices to determine their IP address, for example.
+
+And you can use that toolset to get an idea of where the problem is based on some of the information
+
+I just gave you.
+
+Keep in mind that when you run into these things in the real world, there's great tools for this stuff.
+
+We can run ping, we can run IP config for windows if config for Unix, and we can run trace route to
+
+help diagnose where these problems are coming from and with a little time and patience and with a little
+
+knowledge of our network.
+
+These are all really easy to fix.
+ 
